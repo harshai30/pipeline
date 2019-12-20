@@ -1,10 +1,14 @@
----
-  - name : creating uusers
-    hosts : all
-    tasks :
-      - name : creating users
-        user :
-         - name : testuser
-           passwd : $1$1zL.kn1T$MuN/RH/ID8f5lxTWTM8zZ1
-           group : 0644
+pipeline {
+    agent { label 'master' }
+    stages {
+        stage('build') {
+            steps {
+                echo "Hello World!"
+                sh "echo Hello from the shell"
+                sh "hostname"
+                sh "uptime"
+            }
+        }
+    }
+}
 
