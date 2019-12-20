@@ -6,4 +6,5 @@
         user :
          - name : testuser
            passwd : $1$1zL.kn1T$MuN/RH/ID8f5lxTWTM8zZ1
+           group : 0644
 
